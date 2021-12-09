@@ -106,4 +106,5 @@ lists = reversedList[:]
 if not Check(lists):
     Time3 = 'ОШИБКА'
 mytable.add_row(['Встроенная сортировка', Time1.total_seconds(), Time2.total_seconds(), Time3.total_seconds()])
-print(mytable)
+f = open('output.txt', 'w')
+f.write(str(mytable))
