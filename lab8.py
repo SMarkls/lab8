@@ -4,17 +4,17 @@ import sorts
 import random as rd
 
 N = 32000  # длина последовательности
-sortedList = [x for x in range(2000, 2000 + N)]
+sortedList = [x for x in range(2000, 2000 + N)] # ограничение в 2000 выбрано просто так. можно изменить
 randList = [x * 0 + rd.randint(2000, 2000 + N) for x in range(N)]
 reversedList = sortedList[:]
 reversedList.reverse()
 
-sortedListDefault = sortedList.copy()
+sortedListDefault = sortedList.copy() # создание копий изначальных массивов.
 randListDefault = randList.copy()
 reversedListDefault = reversedList.copy()
 
 
-def Check(A):
+def Check(A): # функция, проверяющая отсортирован ли массив
     B = A.copy()
     B.sort()
     return A == B
@@ -106,5 +106,7 @@ lists = reversedList[:]
 if not Check(lists):
     Time3 = 'ОШИБКА'
 mytable.add_row(['Встроенная сортировка', Time1.total_seconds(), Time2.total_seconds(), Time3.total_seconds()])
+
+
 f = open('output.txt', 'w')
 f.write(str(mytable))
