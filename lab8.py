@@ -109,4 +109,6 @@ mytable.add_row(['Встроенная сортировка', Time1.total_second
 
 
 f = open('output.txt', 'w')
+f.write(f'Колтчество элементов: {N}\n')
+f.write(f'Случайная последовательность, сгенерированная программно: {randListDefault}\n')
 f.write(str(mytable))
