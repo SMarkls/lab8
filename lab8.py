@@ -3,7 +3,7 @@ from datetime import datetime
 import sorts
 import random as rd
 
-N = 32000  # длина последовательности
+N = 500000  # длина последовательности
 sortedList = [x for x in range(2000, 2000 + N)] # ограничение в 2000 выбрано просто так. можно изменить
 randList = [x * 0 + rd.randint(2000, 2000 + N) for x in range(N)]
 reversedList = sortedList[:]
